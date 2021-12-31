@@ -61,7 +61,7 @@ class ListMaterialState extends State<ListMaterial> {
                   return DropdownButton<String>(
                     value: nomF,
                     iconSize: 24,
-                    hint: const Text("Find By family"),
+                    hint: const Text("Chercher par famille"),
                     elevation: 16,
                     style: const TextStyle(color: Colors.black),
                     underline: Container(
@@ -84,7 +84,7 @@ class ListMaterialState extends State<ListMaterial> {
                     },
                   );
                 } else {
-                  return const Text("No Family");
+                  return const Text("Pas de famille");
                 }
               }),
         ]),
@@ -99,12 +99,12 @@ class ListMaterialState extends State<ListMaterial> {
                     searchController.clear();
                   });
                 },
-                child: const Text("RESET"),
+                child: const Text("Restaurer",style: TextStyle(color:Colors.teal),),
                 style: ButtonStyle(
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18.0),
-                            side: const BorderSide(color: Colors.blue))))),
+                            )))),
           ],
         ),
         Expanded(
@@ -114,7 +114,7 @@ class ListMaterialState extends State<ListMaterial> {
                   AsyncSnapshot<List<Materiel>> projectSnap) {
                 if (projectSnap.connectionState == ConnectionState.none ||
                     !projectSnap.hasData) {
-                  return const Text("NO DATA");
+                  return const Text("Aucune data");
                 }
                 return ListView.builder(
                     itemCount: projectSnap.data!.length,
@@ -143,7 +143,7 @@ class ListMaterialState extends State<ListMaterial> {
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: <Widget>[
                                     TextButton(
-                                      child: const Text('More detail'),
+                                      child: const Text('Plus détails',style: TextStyle(color:Colors.teal),),
                                       onPressed: () async {
                                         await MyDialog.detailMaterial(
                                             context, projectSnap.data![index]);
@@ -152,7 +152,7 @@ class ListMaterialState extends State<ListMaterial> {
                                     const SizedBox(width: 8),
                                     const SizedBox(width: 8),
                                     TextButton(
-                                      child: const Text('Borrow'),
+                                      child: const Text('Emprunter',style: TextStyle(color:Colors.teal),),
                                       onPressed: () async {
                                         MyDialog.borrowMaterialForm(
                                             context, projectSnap.data![index]);

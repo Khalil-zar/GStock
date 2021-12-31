@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:frontend/home/drawer.dart';
 import 'package:frontend/services/utility/router.dart';
 
 class Family extends StatefulWidget {
@@ -31,8 +32,9 @@ class MyFamilyState extends State<Family> {
           floatingActionButton: SpeedDial(
             animatedIcon: AnimatedIcons.menu_close,
             foregroundColor: Colors.black,
-            openCloseDial: isDialOpen,
             backgroundColor: const Color.fromRGBO(255, 175, 244, 1),
+            openCloseDial: isDialOpen,
+
             spacing: 15,
             closeManually: true,
             children: [
@@ -59,7 +61,8 @@ class MyFamilyState extends State<Family> {
                     key.currentState!.pushNamed('/addFamily');
                   }),
             ],
-          )),
+          ),
+      ),
     );
   }
 }

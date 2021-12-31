@@ -20,7 +20,7 @@ class _ListMember extends State<ListMember> {
             (BuildContext context, AsyncSnapshot<List<Member>> projectSnap) {
           if (projectSnap.connectionState == ConnectionState.none ||
               !projectSnap.hasData) {
-            return const Text("NO DATA");
+            return const Text("Aucune data");
           }
 
           return ListView.builder(
@@ -33,7 +33,7 @@ class _ListMember extends State<ListMember> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       TextButton(
-                        child: const Text('return borrow'),
+                        child: const Text('Retourner emprunt'),
                         onPressed: () async {
                           await MyDialog.returnMaterialForm(
                               context, projectSnap.data![index]);
@@ -92,7 +92,7 @@ class _ListMember extends State<ListMember> {
                               if (snapshot.connectionState ==
                                       ConnectionState.none ||
                                   !snapshot.hasData) {
-                                return const Text("ERREUR DATA BASE");
+                                return const Text("Erreur");
                               }
                               return ListTile(
                                 leading: const Icon(
@@ -101,7 +101,7 @@ class _ListMember extends State<ListMember> {
                                   color: Color.fromARGB(255, 3, 152, 252),
                                 ),
                                 title: Text(snapshot.data!.nomMateriel!),
-                                subtitle: Text("Quantity : " +
+                                subtitle: Text("Quantité : " +
                                     projectSnap.data![index].quantite
                                         .toString()),
                               );

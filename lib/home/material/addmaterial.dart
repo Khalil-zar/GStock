@@ -101,7 +101,7 @@ class _MymatState extends State<AddMaterial> {
                     child: const Text("Date d'acquition")),
                 children,
                 ElevatedButton(
-                  child: const Text('Ajouteer'),
+                  child: const Text('Ajouter'),
                   onPressed: () async {
                     if (_formKey.currentState!.validate()) {
                       bool state = await Materielservice.add(

@@ -38,14 +38,14 @@ class _ListFamily extends State<ListFamily> {
                             leading: const Icon(Icons.handyman, size: 60),
                             title: Text(projectSnap.data![index].familyname!,
                                 style: const TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.w800,color: Colors.redAccent)),
+                                    fontSize: 20, fontWeight: FontWeight.w800,color: Colors.black)),
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: <Widget>[
                               FlatButton(
                                 child: const Text('Voir les matériaux',style: TextStyle(
-                                    color: Colors.purpleAccent,
+                                    color: Colors.teal,
                                     fontSize: 20),),
                                 onPressed: () {},
                               ),

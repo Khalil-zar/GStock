@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/auth/register.dart';
+import 'package:frontend/home/drawer.dart';
 import 'package:frontend/home/home.dart';
 import 'auth/login.dart';
 import 'package:frontend/home/family/family.dart';

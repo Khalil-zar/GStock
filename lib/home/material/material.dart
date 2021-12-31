@@ -33,7 +33,8 @@ class MyMaterialState extends State<MyMaterial> {
           floatingActionButton: SpeedDial(
             animatedIcon: AnimatedIcons.menu_close,
             openCloseDial: isDialOpen,
-            backgroundColor: Colors.blueAccent,
+            foregroundColor: Colors.black,
+            backgroundColor: const Color.fromRGBO(255, 175, 244, 1),
             overlayColor: Colors.grey,
             overlayOpacity: 0.5,
             spacing: 15,
@@ -43,8 +44,8 @@ class MyMaterialState extends State<MyMaterial> {
               SpeedDialChild(
                   child: const Icon(Icons.list),
                   label: 'List Material',
-                  backgroundColor: Colors.red[400],
-                  foregroundColor: Colors.white,
+                  backgroundColor:  const Color.fromRGBO(249, 210, 244, 1),
+                  foregroundColor: Colors.black,
                   onTap: () {
                     setState(() {
                       isDialOpen.value = false;
@@ -53,9 +54,9 @@ class MyMaterialState extends State<MyMaterial> {
                   }),
               SpeedDialChild(
                   child: const Icon(Icons.add),
-                  label: 'Add Material',
-                  backgroundColor: Colors.red[400],
-                  foregroundColor: Colors.white,
+                  label: 'Ajouter Material',
+                  backgroundColor:  const Color.fromRGBO(249, 210, 244, 1),
+                  foregroundColor: Colors.black,
                   onTap: () {
                     setState(() {
                       isDialOpen.value = false;
@@ -64,9 +65,9 @@ class MyMaterialState extends State<MyMaterial> {
                   }),
               SpeedDialChild(
                   child: const Icon(Icons.assignment_return),
-                  label: 'All Borowed material',
-                  backgroundColor: Colors.red[400],
-                  foregroundColor: Colors.white,
+                  label: 'Tous les materiels empruntés',
+                  backgroundColor:  const Color.fromRGBO(249, 210, 244, 1),
+                  foregroundColor: Colors.black,
                   onTap: () {
                     setState(() {
                       isDialOpen.value = false;
